@@ -1,5 +1,6 @@
 <!-- Only execute if hero is defined -->
-<div *ngIf="hero"> 
+<div *ngIf="hero">
+  <button (click)="goBack()">Go back</button> 
   <h2>{{hero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
     <div>
