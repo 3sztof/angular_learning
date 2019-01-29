@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7e0cf804-a6c9-48f1-a5d9-ebcdd72a4241</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>1_Zwykle_wysylanie_i_odbieranie_hardcoded_queue\1_send.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Python_Project</Name>
+    <RootNamespace>Python_Project</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="2_Rozdzielanie_pojedynczych_zadan_z_potwierdzeniem_wykonania_ack\4_worker.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="2_Rozdzielanie_pojedynczych_zadan_z_potwierdzeniem_wykonania_ack\3_new_task.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="1_Zwykle_wysylanie_i_odbieranie_hardcoded_queue\2_receive.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="1_Zwykle_wysylanie_i_odbieranie_hardcoded_queue\1_send.py" />
+    <Compile Include="3_Rozsylanie_logow_do_wszystkich_odbiorcow_fanout_exchange\5_emit_log.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3_Rozsylanie_logow_do_wszystkich_odbiorcow_fanout_exchange\6_receive_logs.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="4_Rozsylanie_logow_do_okreslonych_odbiorcow_tematu_direct_exchange\7_emit_log_direct.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="4_Rozsylanie_logow_do_okreslonych_odbiorcow_tematu_direct_exchange\8_receive_logs_direct.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="5_Routing_w_zaleznosci_od_nadawcy_topic_exchange\9_emit_log_topic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="5_Routing_w_zaleznosci_od_nadawcy_topic_exchange\10_receive_logs_topic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="6_Remote_procedure_call_RPC\11_rpc_server.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="6_Remote_procedure_call_RPC\12_rpc_client.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="1_Zwykle_wysylanie_i_odbieranie_hardcoded_queue\" />
+    <Folder Include="2_Rozdzielanie_pojedynczych_zadan_z_potwierdzeniem_wykonania_ack\" />
+    <Folder Include="3_Rozsylanie_logow_do_wszystkich_odbiorcow_fanout_exchange\" />
+    <Folder Include="4_Rozsylanie_logow_do_okreslonych_odbiorcow_tematu_direct_exchange\" />
+    <Folder Include="5_Routing_w_zaleznosci_od_nadawcy_topic_exchange\" />
+    <Folder Include="6_Remote_procedure_call_RPC\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="5_Routing_w_zaleznosci_od_nadawcy_topic_exchange\Tutorial_5.txt" />
+    <Content Include="1_Zwykle_wysylanie_i_odbieranie_hardcoded_queue\Tutorial_1.txt" />
+    <Content Include="2_Rozdzielanie_pojedynczych_zadan_z_potwierdzeniem_wykonania_ack\Tutorial_2.txt" />
+    <Content Include="3_Rozsylanie_logow_do_wszystkich_odbiorcow_fanout_exchange\Tutorial_3.txt" />
+    <Content Include="4_Rozsylanie_logow_do_okreslonych_odbiorcow_tematu_direct_exchange\Tutorial_4.txt" />
+    <Content Include="6_Remote_procedure_call_RPC\Tutorial_6.txt" />
+  </ItemGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
