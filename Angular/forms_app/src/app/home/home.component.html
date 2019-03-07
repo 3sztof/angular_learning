@@ -1,3 +1,33 @@
-<h1>Home</h1>
+<h1 [ngClass]="{
+  'gray': h1Style,
+  'large': !h1Style
+  }">
+  Home
+</h1>
 
 <button (click)="firstClick()">Click me</button>
+
+<!-- Other events to bind:
+(focus)="myMethod()"
+(blur)="myMethod()" 
+(submit)="myMethod()"  
+(scroll)="myMethod()"
+
+(cut)="myMethod()"
+(copy)="myMethod()"
+(paste)="myMethod()"
+
+(keydown)="myMethod()"
+(keypress)="myMethod()"
+(keyup)="myMethod()"
+
+(mouseenter)="myMethod()"
+(mousedown)="myMethod()"
+(mouseup)="myMethod()"
+
+(click)="myMethod()"
+(dblclick)="myMethod()"
+
+(drag)="myMethod()"
+(dragover)="myMethod()"
+(drop)="myMethod()" -->
