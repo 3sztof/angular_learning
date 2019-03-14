@@ -1,0 +1,17 @@
+@import '../themes';
+
+@include nb-install-component() {
+  background: nb-theme(card-bg); // now, for each theme registered the corresponding value will be inserted
+
+  .container {
+    background: nb-theme(color-bg);
+    font-weight: nb-theme(font-weight-bold);
+  }
+}
+
+// @import '../../../@theme/styles/themes';
+
+// :host {
+
+//   background: nb-theme(card-bg); // and use it
+// }
